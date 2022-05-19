@@ -2,7 +2,7 @@ import { GetServerSideProps } from 'next';
 
 // @ts-ignore
 const Page = ({ ran }) => {
-  return <div>hello page@: {ran} commit 1</div>;
+  return <div>hello page@: {ran} commit 2</div>;
 };
 
 export const getServerSideProps: GetServerSideProps = async () => {
