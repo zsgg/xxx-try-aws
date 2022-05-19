@@ -1,0 +1,51 @@
+{
+  "packageManager": "yarn@3.1.1",
+  "workspaces": [
+    "apps/**/*",
+    "packages/**/*",
+    "recipes/**/*"
+  ],
+  "scripts": {
+    "_:package:update": "yarn upgrade-interactive",
+    "eslint": "eslint --fix . --ext .js --ext .ts --ext .tsx --ext .json",
+    "postinstall": "husky install && chmod ug+x .husky/*",
+    "husky:pre-push:check": "yarn workspaces foreach -pvt run husky:pre-push:check"
+  },
+  "devDependencies": {
+    "@types/jest": "^27.4.1",
+    "@typescript-eslint/eslint-plugin": "^5.21.0",
+    "@typescript-eslint/parser": "^5.21.0",
+    "eslint": "^8.14.0",
+    "eslint-config-next": "^12.1.5",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-import-resolver-node": "^0.3.6",
+    "eslint-import-resolver-typescript": "^2.7.1",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jest": "^26.1.5",
+    "eslint-plugin-jest-dom": "^4.0.1",
+    "eslint-plugin-json": "^3.1.0",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-react": "^7.29.4",
+    "eslint-plugin-react-hooks": "^4.5.0",
+    "eslint-plugin-sort-keys-fix": "^1.1.2",
+    "eslint-plugin-testing-library": "^5.3.1",
+    "eslint-plugin-unused-imports": "^2.0.0",
+    "husky": "^7.0.4",
+    "jest": "^28.0.1",
+    "lint-staged": "^12.4.1",
+    "pm2": "^5.2.0",
+    "prettier": "^2.6.2",
+    "ts-jest": "^27.1.4",
+    "typescript": "4.5.5"
+  },
+  "resolutions": {
+    "@types/react": "18.0.1",
+    "@types/react-dom": "^18.0.2"
+  },
+  "dependenciesMeta": {
+    "next@12.1.5": {
+      "unplugged": true
+    }
+  }
+}

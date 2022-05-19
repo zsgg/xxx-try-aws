@@ -1,0 +1,32 @@
+{
+  "name": "try--next-deploy-ec2-nginx-cdk",
+  "version": "0.1.0",
+  "bin": "bin/lambda--slack.js",
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc -w",
+    "test": "jest",
+    "cdk:ls": "cdk ls",
+    "cdk:bootstrap": "cdk bootstrap --profile \"zsgg-root:us-east-1\"",
+    "cdk:deploy": "cdk deploy --profile \"zsgg-root:us-east-1\"",
+    "cdk:synth": "cdk synth --profile \"zsgg-root:us-east-1\"",
+    "cdk:diff": "cdk diff --profile \"zsgg-root:us-east-1\"",
+    "cdk:destroy": "cdk destroy --profile \"zsgg-root:us-east-1\"",
+    "husky:pre-push:check": "yarn build"
+  },
+  "devDependencies": {
+    "@types/jest": "^27.4.1",
+    "@types/node": "16.11.26",
+    "aws-cdk": "^2.21.1",
+    "cdk": "^2.21.1",
+    "jest": "^28.0.1",
+    "ts-jest": "^27.1.4",
+    "ts-node": "^10.7.0",
+    "typescript": "4.5.5"
+  },
+  "dependencies": {
+    "aws-cdk-lib": "^2.21.1",
+    "constructs": "^10.0.127",
+    "source-map-support": "^0.5.21"
+  }
+}

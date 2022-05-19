@@ -1,0 +1,19 @@
+/coverage
+/node_modules
+
+# output
+dist
+@out
+.next
+.next-*
+
+# yarn zero install
+.yarn/*
+!.yarn/cache
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+#!.yarn/unplugged
+#!.yarn/unplugged/**/*/dist
