@@ -14,7 +14,7 @@ npm i -g yarn@berry pm2
 
 # git
 git clone https://github.com/zsgg/try-aws.git &&\
-cd mono &&\
+cd try-aws &&\
 yarn install &&\
 pm2 kill; pm2 delete all;\
 yarn workspace try--next-deploy-ec2-1-nginx run build;\
