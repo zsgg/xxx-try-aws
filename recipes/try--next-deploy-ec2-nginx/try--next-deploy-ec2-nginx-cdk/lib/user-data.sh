@@ -13,7 +13,7 @@ npm i -g yarn@berry pm2
 
 
 # git
-git clone https://github.com/gssong/try-aws.git &&\
+git clone https://github.com/zsgg/try-aws.git &&\
 cd mono &&\
 yarn install &&\
 pm2 kill; pm2 delete all;\
