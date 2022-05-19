@@ -1,0 +1,38 @@
+{
+  "name": "try--next-deploy-serverless-cdk-t2-cdk",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "cdk:build": "tsc --project tsconfig.cdk.json",
+    "cdk:watch": "tsc -w --project tsconfig.cdk.json",
+    "cdk:test": "jest --config=jest.cdk.config.js",
+    "cdk": "cdk",
+    "cdk:bootstrap": "cdk bootstrap --profile \"zsgg-root:us-east-1\"",
+    "cdk:deploy": "cdk deploy --profile \"zsgg-root:us-east-1\"",
+    "cdk:synth": "cdk synth --profile \"zsgg-root:us-east-1\"",
+    "cdk:diff": "cdk diff --profile \"zsgg-root:us-east-1\"",
+    "cdk:destroy": "cdk destroy --profile \"zsgg-root:us-east-1\""
+  },
+  "dependencies": {
+    "@sls-next/cdk-construct": "^3.7.0",
+    "@sls-next/lambda-at-edge": "^3.7.0",
+    "aws-cdk-lib": "^2.24.1",
+    "constructs": "^10.1.7",
+    "next": "12.1.6",
+    "react": "18.1.0",
+    "react-dom": "18.1.0",
+    "source-map-support": "^0.5.21"
+  },
+  "devDependencies": {
+    "@aws-cdk/assert": "^2.24.1",
+    "@next/env": "^12.1.6",
+    "@next/eslint-plugin-next": "12.1.6",
+    "@types/aws-lambda": "^8.10.97",
+    "@types/node": "16.11.35",
+    "@types/react": "18.0.1",
+    "@types/react-dom": "18.0.2",
+    "aws-cdk": "^2.24.1",
+    "eslint": "^8.14.0",
+    "typescript": "4.5.5"
+  }
+}

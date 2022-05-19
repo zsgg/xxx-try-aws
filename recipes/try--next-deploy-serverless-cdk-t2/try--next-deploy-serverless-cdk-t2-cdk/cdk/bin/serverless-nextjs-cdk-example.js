@@ -1,0 +1,19 @@
+#!/usr/bin/env node
+'use strict';
+Object.defineProperty(exports, '__esModule', { value: true });
+require('source-map-support/register');
+const aws_cdk_lib_1 = require('aws-cdk-lib');
+const lambda_at_edge_1 = require('@sls-next/lambda-at-edge');
+const serverless_nextjs_cdk_example_stack_1 = require('../serverless-nextjs-cdk-example-stack');
+const builder = new lambda_at_edge_1.Builder('.', './build', { args: ['build'] });
+builder
+  .build()
+  .then(() => {
+    const app = new aws_cdk_lib_1.App();
+    new serverless_nextjs_cdk_example_stack_1.ServerlessNextjsCdkExampleStack(app, 'ServerlessNextjsCdkExampleStack', {});
+  })
+  .catch((e) => {
+    console.log(e);
+    process.exit(1);
+  });
+// # sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoic2VydmVybGVzcy1uZXh0anMtY2RrLWV4YW1wbGUuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJzZXJ2ZXJsZXNzLW5leHRqcy1jZGstZXhhbXBsZS50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7QUFDQSx1Q0FBcUM7QUFDckMsNkNBQWtDO0FBQ2xDLDZEQUFtRDtBQUNuRCxnR0FBeUY7QUFFekYsTUFBTSxPQUFPLEdBQUcsSUFBSSx3QkFBTyxDQUFDLEdBQUcsRUFBRSxTQUFTLEVBQUUsRUFBRSxJQUFJLEVBQUUsQ0FBQyxPQUFPLENBQUMsRUFBRSxDQUFDLENBQUM7QUFDakUsT0FBTztLQUNKLEtBQUssRUFBRTtLQUNQLElBQUksQ0FBQyxHQUFHLEVBQUU7SUFDVCxNQUFNLEdBQUcsR0FBRyxJQUFJLGlCQUFHLEVBQUUsQ0FBQztJQUN0QixJQUFJLHFFQUErQixDQUFDLEdBQUcsRUFBRSxpQ0FBaUMsRUFBRSxFQUFFLENBQUMsQ0FBQztBQUNsRixDQUFDLENBQUM7S0FDRCxLQUFLLENBQUMsQ0FBQyxDQUFDLEVBQUUsRUFBRTtJQUNYLE9BQU8sQ0FBQyxHQUFHLENBQUMsQ0FBQyxDQUFDLENBQUM7SUFDZixPQUFPLENBQUMsSUFBSSxDQUFDLENBQUMsQ0FBQyxDQUFDO0FBQ2xCLENBQUMsQ0FBQyxDQUFDIiwic291cmNlc0NvbnRlbnQiOlsiIyEvdXNyL2Jpbi9lbnYgbm9kZVxuaW1wb3J0ICdzb3VyY2UtbWFwLXN1cHBvcnQvcmVnaXN0ZXInO1xuaW1wb3J0IHsgQXBwIH0gZnJvbSAnYXdzLWNkay1saWInO1xuaW1wb3J0IHsgQnVpbGRlciB9IGZyb20gJ0BzbHMtbmV4dC9sYW1iZGEtYXQtZWRnZSc7XG5pbXBvcnQgeyBTZXJ2ZXJsZXNzTmV4dGpzQ2RrRXhhbXBsZVN0YWNrIH0gZnJvbSAnLi4vc2VydmVybGVzcy1uZXh0anMtY2RrLWV4YW1wbGUtc3RhY2snO1xuXG5jb25zdCBidWlsZGVyID0gbmV3IEJ1aWxkZXIoJy4nLCAnLi9idWlsZCcsIHsgYXJnczogWydidWlsZCddIH0pO1xuYnVpbGRlclxuICAuYnVpbGQoKVxuICAudGhlbigoKSA9PiB7XG4gICAgY29uc3QgYXBwID0gbmV3IEFwcCgpO1xuICAgIG5ldyBTZXJ2ZXJsZXNzTmV4dGpzQ2RrRXhhbXBsZVN0YWNrKGFwcCwgJ1NlcnZlcmxlc3NOZXh0anNDZGtFeGFtcGxlU3RhY2snLCB7fSk7XG4gIH0pXG4gIC5jYXRjaCgoZSkgPT4ge1xuICAgIGNvbnNvbGUubG9nKGUpO1xuICAgIHByb2Nlc3MuZXhpdCgxKTtcbiAgfSk7XG4iXX0=

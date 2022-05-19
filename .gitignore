@@ -6,6 +6,8 @@ dist
 @out
 .next
 .next-*
+cdk.out
+.idea
 
 # yarn zero install
 .yarn/*
